@@ -3,7 +3,7 @@ from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.chrome.options import Options
 from webdriver_manager.chrome import ChromeDriverManager
 
-def init_driver(headless=True):
+def init_driver(headless=False):
     options = Options()
     if headless:
         options.add_argument("--headless")

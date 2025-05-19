@@ -1,13 +1,13 @@
 from utils.browser import init_driver
-from pages.easyjet_page import EasyJetPage
-from parsers.easyjet_parser import parse_flight_prices
+from pages.landing_page import LandingPage
+from parsers.landing_page_parser import parse_flight_prices
 import pandas as pd
 
 def main():
     driver = init_driver()
-    page = EasyJetPage(driver)
+    page = LandingPage(driver)
 
-    url = "https://www.easyjet.com"  # Replace with real search URL
+    url = "https://www.nepalairlines.com.np/"
     page.load_page(url)
     html = page.get_flight_html()
 
